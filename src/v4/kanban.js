@@ -6,30 +6,24 @@ import { showToast } from './toast.js';
 import { showModal } from './modal.js';
 
 const COLUMNS = [
-  { id: 'todo',    title: 'To do',       color: 'var(--text-muted)' },
-  { id: 'doing',   title: 'In progress', color: 'var(--blue)' },
-  { id: 'review',  title: 'Review',      color: 'var(--yellow)' },
-  { id: 'done',    title: 'Done',        color: 'var(--green)' }
+  { id: 'todo',    title: 'A fazer (Encomendas)', color: 'var(--text-muted)' },
+  { id: 'doing',   title: 'Na Cozinha (Produzindo)', color: 'var(--blue)' },
+  { id: 'review',  title: 'Confeitando / Acabamento',      color: 'var(--yellow)' },
+  { id: 'done',    title: 'Pronto / Entregue',    color: 'var(--green)' }
 ];
 
 const LABELS = [
-  { id: 'design',  text: 'Design',  color: 'purple' },
-  { id: 'eng',     text: 'Eng',     color: 'blue' },
-  { id: 'pm',      text: 'PM',      color: 'green' },
-  { id: 'bug',     text: 'Bug',     color: 'red' },
-  { id: 'urgent',  text: 'Urgent',  color: 'red' },
-  { id: 'docs',    text: 'Docs',    color: 'yellow' }
+  { id: 'bolo',    text: 'Bolo Festivo', color: 'purple' },
+  { id: 'doces',   text: 'Docinhos',     color: 'pink' },
+  { id: 'casamento', text: 'Casamento',  color: 'blue' },
+  { id: 'urgente', text: 'Urgente',    color: 'red' },
+  { id: 'aniversario', text: 'Aniversário', color: 'green' }
 ];
 
 const ASSIGNEES = {
-  SK: { name: 'Sarah Kowalski', color: 'azure' },
-  MR: { name: 'Michael Reyes',  color: 'purple' },
-  EW: { name: 'Emily Wang',     color: 'yellow' },
-  MK: { name: 'Mark Kim',       color: 'red' },
-  LP: { name: 'Lina Park',      color: 'green' },
-  DR: { name: 'Diego Reyes',    color: 'blue' },
-  YT: { name: 'Yuki Tanaka',    color: 'primary' },
-  TH: { name: 'Tom Hardy',      color: 'purple' }
+  CF: { name: 'Confeiteira Chefe', color: 'purple' },
+  JD: { name: 'João (Entregas)',  color: 'blue' },
+  AM: { name: 'Ana (Ajudante)',   color: 'yellow' }
 };
 
 const COLOR_VAR = {
@@ -40,22 +34,16 @@ const COLOR_VAR = {
 
 let nextId = 1;
 const CARDS = [
-  { id: nextId++, col: 'todo',   title: 'Define onboarding email sequence',  desc: 'Three-message welcome flow with day 1, 3, 7 cadence',           labels: ['pm'],          assignees: ['EW'],       due: 'May 02', priority: 'medium' },
-  { id: nextId++, col: 'todo',   title: 'Refresh icon system',                desc: 'Move from heroicons to a custom set with consistent stroke',     labels: ['design'],      assignees: ['SK'],       due: 'May 05', priority: 'low' },
-  { id: nextId++, col: 'todo',   title: 'Audit a11y on form pages',           desc: '',                                                                labels: ['eng', 'docs'], assignees: ['MR', 'TH'], due: 'May 08', priority: 'medium' },
-  { id: nextId++, col: 'todo',   title: 'Plan Q3 OKRs',                       desc: 'Workshop with leads to define Q3 outcomes',                      labels: ['pm'],          assignees: ['EW'],       due: 'May 15', priority: 'low' },
+  { id: nextId++, col: 'todo',   title: 'Bolo de Casamento 3 Andares (Ninho c/ Morango)',  desc: 'Cliente: Beatriz Lima - Entrega Sábado às 14h',           labels: ['bolo', 'casamento'],          assignees: ['CF', 'AM'],       due: 'Sáb 14h', priority: 'high' },
+  { id: nextId++, col: 'todo',   title: '100 Brigadeiros Gourmet para Aniversário',                desc: 'Caixinhas personalizadas com laço vermelho',     labels: ['doces', 'aniversario'],      assignees: ['AM'],       due: 'Sex 18h', priority: 'medium' },
+  { id: nextId++, col: 'todo',   title: 'Bolo Tema Unicórnio (Massa Amanteigada)',           desc: 'Recheio de Doce de Leite com Nozes',                                 labels: ['bolo', 'urgente'], assignees: ['CF'], due: 'Amanhã', priority: 'high' },
 
-  { id: nextId++, col: 'doing',  title: 'Implement drag-and-drop kanban',    desc: 'Use HTML5 drag API, no library',                                 labels: ['eng'],         assignees: ['MR'],       due: 'Apr 30', priority: 'high' },
-  { id: nextId++, col: 'doing',  title: 'Design product detail page',         desc: 'Gallery + variants + reviews + related',                         labels: ['design'],      assignees: ['SK'],       due: 'Apr 30', priority: 'high' },
-  { id: nextId++, col: 'doing',  title: 'Write FAQ content',                  desc: '15 articles across 5 categories',                                labels: ['docs'],        assignees: ['EW'],       due: 'May 01', priority: 'medium' },
+  { id: nextId++, col: 'doing',  title: 'Preparando Massa de Chocolate Trufada',    desc: 'Bater claras em neve e pesar ingredientes',                                 labels: ['bolo'],         assignees: ['AM'],       due: 'Hoje 10h', priority: 'high' },
+  { id: nextId++, col: 'doing',  title: 'Recheio de Maracujá para Ovos de Colher',         desc: 'Redução de polpa fresca de maracujá',                         labels: ['doces'],      assignees: ['CF'],       due: 'Hoje 14h', priority: 'medium' },
 
-  { id: nextId++, col: 'review', title: 'Fix DataTables sort indicators',    desc: 'Replace empty span with proper chevron SVG',                     labels: ['bug', 'eng'],  assignees: ['MR'],       due: 'Apr 29', priority: 'medium' },
-  { id: nextId++, col: 'review', title: 'Notifications dropdown',             desc: 'Bell button → panel with sample notifications',                  labels: ['eng'],         assignees: ['TH'],       due: 'Apr 29', priority: 'medium' },
+  { id: nextId++, col: 'review', title: 'Cobertura de Chantininho com Degradê Rosa',    desc: 'Alisamento final e aplicação de glitter comestível',                     labels: ['bolo', 'urgente'],  assignees: ['CF'],       due: 'Hoje 16h', priority: 'high' },
 
-  { id: nextId++, col: 'done',   title: 'Build chat page',                    desc: '',                                                                labels: ['eng'],         assignees: ['MR'],       due: 'Apr 28', priority: 'high' },
-  { id: nextId++, col: 'done',   title: 'Build settings page',                desc: '',                                                                labels: ['eng', 'design'], assignees: ['SK', 'TH'], due: 'Apr 28', priority: 'high' },
-  { id: nextId++, col: 'done',   title: 'Migrate to Vite 8',                  desc: '',                                                                labels: ['eng'],         assignees: ['MR'],       due: 'Apr 25', priority: 'medium' },
-  { id: nextId++, col: 'done',   title: 'Add dark mode',                      desc: 'Pre-paint script, token overrides, ECharts theme observer',      labels: ['eng', 'design'], assignees: ['MR', 'SK'], due: 'Apr 25', priority: 'high' }
+  { id: nextId++, col: 'done',   title: 'Kit Festa Infantil (1 Bolo + 50 Salgados)',                    desc: 'Entregue com sucesso para Mariana (Avaliação: 5 estrelas)',                                 labels: ['bolo'],         assignees: ['JD'],       due: 'Ontem', priority: 'low' }
 ];
 
 function escapeHtml(s) { return String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
