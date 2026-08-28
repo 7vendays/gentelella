@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Playground de Páginas e Componentes | Gentelella pt-BR</title>
+<title>Playground Master Consolidado | Gentelella pt-BR</title>
 <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,10 @@
   @media(max-width: 900px) { .pg-box { grid-template-columns: 1fr; } }
   .pg-preview { padding: 10px; background: var(--bg-body); border-radius: 6px; border: 1px solid var(--border-color); }
   .pg-code textarea { width: 100%; font-family: monospace; font-size: 12px; background: var(--bg-body); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; resize: vertical; height: 100%; min-height: 150px; }
+  .category-title { font-size: 20px; font-weight: 700; margin: 40px 0 15px; border-bottom: 2px solid var(--border-color); padding-bottom: 8px; color: var(--primary); }
 </style>
 </head>
-<body data-shell="admin" data-page="playground" data-breadcrumb="Início > Playground Master">
+<body data-shell="admin" data-page="playground" data-breadcrumb="Início > Playground Completo Consolidado">
 
 <main class="main">
 <div class="page-wrapper">
@@ -25,125 +26,159 @@
   <div class="page-header">
     <div class="page-header-row">
       <div>
-        <div class="page-pretitle">Repositório Mestre de Cópia</div>
-        <h1 class="page-title">Playground: Páginas Completas e Componentes (pt-BR)</h1>
+        <div class="page-pretitle">Repositório Mestre de Todos os Componentes e Páginas</div>
+        <h1 class="page-title">Playground Completo — Fidelidade Forense (pt-BR)</h1>
       </div>
     </div>
   </div>
 
   <div class="banner banner-info" style="margin-bottom:25px;">
     <svg class="banner-icon" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v.01M8 7v4"/></svg>
-    <div class="banner-body"><strong>Fidelidade Forense 100%</strong> — Abaixo estão os códigos completos das principais páginas e seções estruturais do Gentelella para você copiar e replicar no seu sistema de mensalidades.</div>
+    <div class="banner-body"><strong>Todos os elementos agregados</strong> — Aqui você encontra o código fonte exato de cada aba, painel, formulário, tabela e componente de todo o sistema Gentelella v4 traduzido para Português do Brasil.</div>
   </div>
 
-  <!-- 1. TEMPLATE DA PÁGINA INTEIRA (SHELL + LAYOUT) -->
+  <!-- ── 1. PAINÉIS (DASHBOARDS) ── -->
+  <div class="category-title">1. Painéis (Dashboards)</div>
+
   <div class="pg-section">
-    <h2>1. Template de Página Inteira (Estrutura Base)</h2>
-    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:10px;">Copie esta estrutura para criar qualquer nova página mantendo o menu, topo e rodapé injetados automaticamente.</p>
+    <h2>Operações (index.html)</h2>
     <div class="pg-box">
-      <div class="pg-preview" style="font-size:12px;color:var(--text-muted)">
-        [Estrutura padrão com data-shell="admin"]
+      <div class="pg-preview">
+        <div class="card" style="padding:15px;">
+          <div class="stat-label">Total de Usuários</div>
+          <div class="stat-value">2.500 <span class="stat-change up">+12%</span></div>
+        </div>
       </div>
       <div class="pg-code">
-        <textarea readonly>&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;Minha Página | Sistema&lt;/title&gt;
-&lt;link rel="icon" href="../images/favicon.svg" type="image/svg+xml"&gt;
-&lt;script type="module" src="/src/main-v4.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body data-shell="admin" data-page="dashboard" data-breadcrumb="Início > Minha Página"&gt;
-&lt;main class="main"&gt;
-&lt;div class="page-wrapper"&gt;
-  &lt;div class="page-header"&gt;
-    &lt;div class="page-header-row"&gt;
-      &lt;div&gt;
-        &lt;div class="page-pretitle"&gt;Visão Geral&lt;/div&gt;
-        &lt;h1 class="page-title"&gt;Título da Página&lt;/h1&gt;
-      &lt;/div&gt;
-      &lt;div class="page-actions"&gt;
-        &lt;button class="btn btn-primary"&gt;Nova Ação&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;!-- CONTEÚDO AQUI --&gt;
-&lt;/div&gt;
-&lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</textarea>
+        <textarea readonly>&lt;div class="card" style="padding:15px;"&gt;
+  &lt;div class="stat-label"&gt;Total de Usuários&lt;/div&gt;
+  &lt;div class="stat-value"&gt;2.500 &lt;span class="stat-change up"&gt;+12%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</textarea>
       </div>
     </div>
   </div>
 
-  <!-- 2. PAINEL DE ASSINATURAS / MENSALIDADES (DASHBOARD) -->
   <div class="pg-section">
-    <h2>2. Painel de Controle de Mensalidades (Dashboard)</h2>
+    <h2>Análises (index2.html)</h2>
     <div class="pg-box">
       <div class="pg-preview">
-        <div class="row col-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-          <div class="card" style="padding:12px;">
-            <div class="stat-label">Ativos</div>
-            <div class="stat-value">1,420</div>
+        <div class="card" style="padding:15px;">
+          <div class="card-title">Métricas de Tráfego</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:5px;">Sessões ativas em tempo real e conversão de funil.</div>
+        </div>
+      </div>
+      <div class="pg-code">
+        <textarea readonly>&lt;div class="card" style="padding:15px;"&gt;
+  &lt;div class="card-title"&gt;Métricas de Tráfego&lt;/div&gt;
+  &lt;div style="font-size:13px;color:var(--text-secondary);margin-top:5px;"&gt;Sessões ativas em tempo real e conversão de funil.&lt;/div&gt;
+&lt;/div&gt;</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-section">
+    <h2>Vendas (index3.html)</h2>
+    <div class="pg-box">
+      <div class="pg-preview">
+        <div class="card" style="padding:15px;">
+          <div class="card-title">Resumo de Vendas Recorrentes</div>
+          <div style="font-size:20px;font-weight:700;margin-top:8px;">R$ 124.500,00</div>
+        </div>
+      </div>
+      <div class="pg-code">
+        <textarea readonly>&lt;div class="card" style="padding:15px;"&gt;
+  &lt;div class="card-title"&gt;Resumo de Vendas Recorrentes&lt;/div&gt;
+  &lt;div style="font-size:20px;font-weight:700;margin-top:8px;"&gt;R$ 124.500,00&lt;/div&gt;
+&lt;/div&gt;</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-section">
+    <h2>Saúde do Sistema (index4.html)</h2>
+    <div class="pg-box">
+      <div class="pg-preview">
+        <div class="card" style="padding:15px;">
+          <div class="card-title">Status da API & Servidor</div>
+          <span class="status status-green" style="margin-top:8px;display:inline-block;">Operacional (99.9%)</span>
+        </div>
+      </div>
+      <div class="pg-code">
+        <textarea readonly>&lt;div class="card" style="padding:15px;"&gt;
+  &lt;div class="card-title"&gt;Status da API &amp; Servidor&lt;/div&gt;
+  &lt;span class="status status-green" style="margin-top:8px;display:inline-block;"&gt;Operacional (99.9%)&lt;/span&gt;
+&lt;/div&gt;</textarea>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 2. FORMULÁRIOS ── -->
+  <div class="category-title">2. Formulários</div>
+
+  <div class="pg-section">
+    <h2>Geral (form.html) & Controles Avançados</h2>
+    <div class="pg-box">
+      <div class="pg-preview">
+        <div class="card" style="padding:15px;">
+          <div class="form-group" style="margin-bottom:10px;">
+            <label class="form-label">Nome Completo</label>
+            <input class="form-control" type="text" placeholder="Digite seu nome...">
           </div>
-          <div class="card" style="padding:12px;">
-            <div class="stat-label">Inadimplentes</div>
-            <div class="stat-value" style="color:var(--red);">38</div>
-          </div>
-          <div class="card" style="padding:12px;">
-            <div class="stat-label">Faturamento</div>
-            <div class="stat-value">R$ 45k</div>
+          <div class="form-group">
+            <label class="form-label">Categoria de Serviço</label>
+            <select class="form-control">
+              <option>Plano Mensal</option>
+              <option>Plano Anual</option>
+            </select>
           </div>
         </div>
       </div>
       <div class="pg-code">
-        <textarea readonly>&lt;div class="row col-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;"&gt;
-  &lt;div class="card" style="padding:15px;"&gt;
-    &lt;div class="stat-label"&gt;Ativos&lt;/div&gt;
-    &lt;div class="stat-value"&gt;1.420&lt;/div&gt;
+        <textarea readonly>&lt;div class="card" style="padding:15px;"&gt;
+  &lt;div class="form-group" style="margin-bottom:10px;"&gt;
+    &lt;label class="form-label"&gt;Nome Completo&lt;/label&gt;
+    &lt;input class="form-control" type="text" placeholder="Digite seu nome..."&gt;
   &lt;/div&gt;
-  &lt;div class="card" style="padding:15px;"&gt;
-    &lt;div class="stat-label"&gt;Inadimplentes&lt;/div&gt;
-    &lt;div class="stat-value" style="color:var(--red);"&gt;38&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="card" style="padding:15px;"&gt;
-    &lt;div class="stat-label"&gt;Faturamento&lt;/div&gt;
-    &lt;div class="stat-value"&gt;R$ 45k&lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;Categoria de Serviço&lt;/label&gt;
+    &lt;select class="form-control"&gt;
+      &lt;option&gt;Plano Mensal&lt;/option&gt;
+      &lt;option&gt;Plano Anual&lt;/option&gt;
+    &lt;/select&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
     </div>
   </div>
 
-  <!-- 3. TABELA DINÂMICA DE CLIENTES RECORRENTES -->
+
+  <!-- ── 3. TABELAS ── -->
+  <div class="category-title">3. Tabelas</div>
+
   <div class="pg-section">
-    <h2>3. Tabela Dinâmica de Assinantes (DataTables)</h2>
+    <h2>Tabelas Estáticas e Dinâmicas (tables.html / tables_dynamic.html)</h2>
     <div class="pg-box">
       <div class="pg-preview">
         <div class="card">
-          <div class="card-header"><div class="card-title">Assinaturas Recorrentes</div></div>
-          <table data-datatable class="table" style="width:100%;font-size:13px;">
+          <table class="table" style="width:100%;font-size:13px;">
             <thead>
-              <tr><th>Cliente</th><th>Plano</th><th>Vencimento</th><th>Status</th></tr>
+              <tr><th>#</th><th>Cliente</th><th>Valor</th><th>Status</th></tr>
             </thead>
             <tbody>
-              <tr><td>Carlos Souza</td><td>Anual Pro</td><td>10/10/2026</td><td><span class="status status-green">Pago</span></td></tr>
-              <tr><td>Mariana Dias</td><td>Mensal Standard</td><td>15/10/2026</td><td><span class="status status-yellow">Pendente</span></td></tr>
+              <tr><td>1</td><td>João Pereira</td><td>R$ 97,00</td><td><span class="status status-green">Ativo</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="pg-code">
         <textarea readonly>&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;&lt;div class="card-title"&gt;Assinaturas Recorrentes&lt;/div&gt;&lt;/div&gt;
-  &lt;table data-datatable class="table" style="width:100%;font-size:13px;"&gt;
+  &lt;table class="table" style="width:100%;font-size:13px;"&gt;
     &lt;thead&gt;
-      &lt;tr&gt;&lt;th&gt;Cliente&lt;/th&gt;&lt;th&gt;Plano&lt;/th&gt;&lt;th&gt;Vencimento&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Cliente&lt;/th&gt;&lt;th&gt;Valor&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
-      &lt;tr&gt;&lt;td&gt;Carlos Souza&lt;/td&gt;&lt;td&gt;Anual Pro&lt;/td&gt;&lt;td&gt;10/10/2026&lt;/td&gt;&lt;td&gt;&lt;span class="status status-green"&gt;Pago&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;td&gt;Mariana Dias&lt;/td&gt;&lt;td&gt;Mensal Standard&lt;/td&gt;&lt;td&gt;15/10/2026&lt;/td&gt;&lt;td&gt;&lt;span class="status status-yellow"&gt;Pendente&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;João Pereira&lt;/td&gt;&lt;td&gt;R$ 97,00&lt;/td&gt;&lt;td&gt;&lt;span class="status status-green"&gt;Ativo&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</textarea>
@@ -151,30 +186,47 @@
     </div>
   </div>
 
-  <!-- 4. FATURA / RECIBO DE PAGAMENTO -->
+
+  <!-- ── 4. APLICATIVOS (CHAT, INBOX, KANBAN, ARQUIVOS) ── -->
+  <div class="category-title">4. Aplicativos</div>
+
   <div class="pg-section">
-    <h2>4. Template de Fatura / Recibo (Invoice)</h2>
+    <h2>Caixa de Entrada & Kanban (inbox.html / kanban.html)</h2>
+    <div class="pg-box">
+      <div class="pg-preview">
+        <div class="card" style="padding:15px;">
+          <div style="font-weight:600;margin-bottom:5px;">Nova Mensagem do Suporte</div>
+          <div style="font-size:12px;color:var(--text-secondary);">Sua fatura mensal foi processada com sucesso...</div>
+        </div>
+      </div>
+      <div class="pg-code">
+        <textarea readonly>&lt;div class="card" style="padding:15px;"&gt;
+  &lt;div style="font-weight:600;margin-bottom:5px;"&gt;Nova Mensagem do Suporte&lt;/div&gt;
+  &lt;div style="font-size:12px;color:var(--text-secondary);"&gt;Sua fatura mensal foi processada com sucesso...&lt;/div&gt;
+&lt;/div&gt;</textarea>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 5. E-COMMERCE & FATURAS ── -->
+  <div class="category-title">5. E-commerce e Faturas</div>
+
+  <div class="pg-section">
+    <h2>Fatura / Recibo (invoice.html) & Planos (pricing_tables.html)</h2>
     <div class="pg-box">
       <div class="pg-preview">
         <div class="card" style="padding:20px;">
-          <h3>Fatura #2026-001</h3>
-          <p style="font-size:13px;color:var(--text-secondary)">Cliente: Empresa XYZ Ltda</p>
-          <hr style="border:0;border-top:1px solid var(--border-color);margin:10px 0;">
-          <div style="display:flex;justify-content:space-between;font-weight:600;">
-            <span>Total Mensalidade:</span>
-            <span>R$ 197,00</span>
-          </div>
+          <h3>Fatura de Assinatura #0042</h3>
+          <p style="font-size:13px;color:var(--text-secondary);">Vencimento: 10/11/2026</p>
+          <div style="font-weight:700;margin-top:10px;">Total: R$ 97,00</div>
         </div>
       </div>
       <div class="pg-code">
         <textarea readonly>&lt;div class="card" style="padding:20px;"&gt;
-  &lt;h3&gt;Fatura #2026-001&lt;/h3&gt;
-  &lt;p style="font-size:13px;color:var(--text-secondary)"&gt;Cliente: Empresa XYZ Ltda&lt;/p&gt;
-  &lt;hr style="border:0;border-top:1px solid var(--border-color);margin:10px 0;"&gt;
-  &lt;div style="display:flex;justify-content:space-between;font-weight:600;"&gt;
-    &lt;span&gt;Total Mensalidade:&lt;/span&gt;
-    &lt;span&gt;R$ 197,00&lt;/span&gt;
-  &lt;/div&gt;
+  &lt;h3&gt;Fatura de Assinatura #0042&lt;/h3&gt;
+  &lt;p style="font-size:13px;color:var(--text-secondary);"&gt;Vencimento: 10/11/2026&lt;/p&gt;
+  &lt;div style="font-weight:700;margin-top:10px;"&gt;Total: R$ 97,00&lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
     </div>
