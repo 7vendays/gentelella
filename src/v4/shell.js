@@ -290,16 +290,16 @@ function openShortcutsModal() {
 
 function openSignOutModal() {
   showModal({
-    title: 'Sign out?',
+    title: 'Sair da conta?',
     size: 'sm',
-    body: '<p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin:0">You\'ll need to sign back in to access your dashboard. Any unsaved changes will be lost.</p>',
+    body: '<p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin:0">Você precisará fazer login novamente para acessar o painel. Todas as alterações não salvas serão perdidas.</p>',
     actions: [
-      { label: 'Cancel', variant: 'ghost' },
+      { label: 'Cancelar', variant: 'ghost' },
       {
-        label: 'Sign out',
+        label: 'Sair',
         variant: 'primary',
         action: () => {
-          showToast('Signed out', { variant: 'success' });
+          showToast('Sessão encerrada', { variant: 'success' });
           setTimeout(() => { window.location.href = 'login.html'; }, 600);
         }
       }
@@ -308,14 +308,14 @@ function openSignOutModal() {
 }
 
 const USER_MENU = [
-  { label: 'Profile',            action: () => { window.location.href = 'profile.html'; } },
-  { label: 'Account settings',   action: () => { window.location.href = 'settings.html'; } },
-  { label: 'Theme generator',    action: () => { window.location.href = 'theme.html'; } },
-  { label: 'Keyboard shortcuts', action: openShortcutsModal },
+  { label: 'Meu Perfil',          action: () => { window.location.href = 'profile.html'; } },
+  { label: 'Configurações',      action: () => { window.location.href = 'settings.html'; } },
+  { label: 'Gerador de Temas',   action: () => { window.location.href = 'theme.html'; } },
+  { label: 'Atalhos de Teclado', action: openShortcutsModal },
   '-',
-  { label: 'Help & support',     action: () => { window.location.href = 'faq.html'; } },
-  { label: 'Lock screen',        action: () => { window.location.href = 'lock_screen.html'; } },
-  { label: 'Sign out',           action: openSignOutModal }
+  { label: 'Ajuda & Suporte',    action: () => { window.location.href = 'faq.html'; } },
+  { label: 'Bloquear Tela',      action: () => { window.location.href = 'lock_screen.html'; } },
+  { label: 'Sair',               action: openSignOutModal }
 ];
 
 function buildNotificationsPanel() {
@@ -324,9 +324,9 @@ function buildNotificationsPanel() {
   wrap.className = 'panel-content';
   wrap.innerHTML = `
     <div class="panel-header">
-      <span class="panel-title">Notifications</span>
-      ${unreadCount ? `<span class="panel-badge">${unreadCount} new</span>` : ''}
-      <button type="button" class="panel-action" data-action="mark-all">Mark all read</button>
+      <span class="panel-title">Notificações</span>
+      ${unreadCount ? `<span class="panel-badge">${unreadCount} novas</span>` : ''}
+      <button type="button" class="panel-action" data-action="mark-all">Marcar todas como lidas</button>
     </div>
     <div class="panel-list">
       ${NOTIFICATIONS.map((n, i) => `
@@ -345,7 +345,7 @@ function buildNotificationsPanel() {
       `).join('')}
     </div>
     <div class="panel-footer">
-      <a href="notifications.html" class="panel-link">View all notifications</a>
+      <a href="notifications.html" class="panel-link">Ver todas as notificações</a>
     </div>
   `;
   return wrap;
@@ -357,9 +357,9 @@ function buildMessagesPanel() {
   wrap.className = 'panel-content';
   wrap.innerHTML = `
     <div class="panel-header">
-      <span class="panel-title">Messages</span>
-      ${unreadCount ? `<span class="panel-badge">${unreadCount} new</span>` : ''}
-      <a href="inbox.html" class="panel-action">Open inbox</a>
+      <span class="panel-title">Mensagens</span>
+      ${unreadCount ? `<span class="panel-badge">${unreadCount} novas</span>` : ''}
+      <a href="inbox.html" class="panel-action">Abrir caixa de entrada</a>
     </div>
     <div class="panel-list">
       ${MESSAGES.map((m, i) => `
@@ -374,7 +374,7 @@ function buildMessagesPanel() {
       `).join('')}
     </div>
     <div class="panel-footer">
-      <a href="inbox.html" class="panel-link">View all messages</a>
+      <a href="inbox.html" class="panel-link">Ver todas as mensagens</a>
     </div>
   `;
   return wrap;

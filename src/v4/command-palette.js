@@ -31,22 +31,22 @@ function buildItems() {
   });
   // Inline actions
   const actions = [
-    { label: 'Toggle theme', keywords: 'theme dark light mode toggle', action: toggleTheme },
-    { label: 'Open profile', keywords: 'profile account user me', action: () => { window.location.href = 'profile.html'; } },
-    { label: 'Open settings', keywords: 'settings preferences config', action: () => { window.location.href = 'settings.html'; } },
-    { label: 'Theme generator', keywords: 'theme color customize brand', action: () => { window.location.href = 'theme.html'; } },
-    { label: 'Help & support', keywords: 'help faq support docs', action: () => { window.location.href = 'faq.html'; } },
+    { label: 'Alternar tema', keywords: 'tema escuro claro modo alternar', action: toggleTheme },
+    { label: 'Abrir perfil', keywords: 'perfil conta usuario eu', action: () => { window.location.href = 'profile.html'; } },
+    { label: 'Abrir configurações', keywords: 'configuracoes preferencias config', action: () => { window.location.href = 'settings.html'; } },
+    { label: 'Gerador de temas', keywords: 'tema cor personalizar marca', action: () => { window.location.href = 'theme.html'; } },
+    { label: 'Ajuda e suporte', keywords: 'ajuda faq suporte documentacao', action: () => { window.location.href = 'faq.html'; } },
     {
-      label: 'Sign out',
-      keywords: 'sign out logout exit',
+      label: 'Sair da conta',
+      keywords: 'sair logout encerrar sessao',
       action: () => showModal({
-        title: 'Sign out?',
+        title: 'Sair da conta?',
         size: 'sm',
-        body: '<p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin:0">You\'ll need to sign back in to access your dashboard.</p>',
+        body: '<p style="font-size:13px;color:var(--text-secondary);line-height:1.6;margin:0">Você precisará fazer login novamente para acessar o painel.</p>',
         actions: [
-          { label: 'Cancel', variant: 'ghost' },
-          { label: 'Sign out', variant: 'primary', action: () => {
-            showToast('Signed out', { variant: 'success' });
+          { label: 'Cancelar', variant: 'ghost' },
+          { label: 'Sair', variant: 'primary', action: () => {
+            showToast('Sessão encerrada com sucesso', { variant: 'success' });
             setTimeout(() => { window.location.href = 'login.html'; }, 600);
           } }
         ]

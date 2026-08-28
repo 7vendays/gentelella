@@ -18,86 +18,86 @@ const VERSION = pkg.version;
 // `data-page` highlight match. The parent stays expanded if any child matches.
 export const NAV = [
   {
-    label: 'General',
+    label: 'Geral',
     items: [
       {
-        text: 'Dashboards', icon: 'dashboard',
+        text: 'Painéis', icon: 'dashboard',
         children: [
-          { key: 'dashboard',   href: 'index.html',  text: 'Operations' },
-          { key: 'dashboard-2', href: 'index2.html', text: 'Analytics' },
-          { key: 'dashboard-3', href: 'index3.html', text: 'Sales' },
-          { key: 'dashboard-4', href: 'index4.html', text: 'System health' }
+          { key: 'dashboard',   href: 'index.html',  text: 'Operações' },
+          { key: 'dashboard-2', href: 'index2.html', text: 'Análises' },
+          { key: 'dashboard-3', href: 'index3.html', text: 'Vendas' },
+          { key: 'dashboard-4', href: 'index4.html', text: 'Saúde do Sistema' }
         ]
       },
       {
-        text: 'Forms', icon: 'forms', badge: { text: 'Hot', cls: 'badge-red' },
+        text: 'Formulários', icon: 'forms', badge: { text: 'Pop', cls: 'badge-red' },
         children: [
-          { key: 'forms',            href: 'form.html',            text: 'General' },
-          { key: 'form-advanced',    href: 'form_advanced.html',   text: 'Advanced controls' },
-          { key: 'form-buttons',     href: 'form_buttons.html',    text: 'Buttons' },
-          { key: 'form-upload',      href: 'form_upload.html',     text: 'Upload' },
-          { key: 'form-validation',  href: 'form_validation.html', text: 'Validation' },
-          { key: 'form-wizards',     href: 'form_wizards.html',    text: 'Wizard' }
+          { key: 'forms',            href: 'form.html',            text: 'Geral' },
+          { key: 'form-advanced',    href: 'form_advanced.html',   text: 'Controles Avançados' },
+          { key: 'form-buttons',     href: 'form_buttons.html',    text: 'Botões' },
+          { key: 'form-upload',      href: 'form_upload.html',     text: 'Envio de Arquivos' },
+          { key: 'form-validation',  href: 'form_validation.html', text: 'Validação' },
+          { key: 'form-wizards',     href: 'form_wizards.html',    text: 'Assistente (Wizard)' }
         ]
       },
       {
-        text: 'Tables', icon: 'tables',
+        text: 'Tabelas', icon: 'tables',
         children: [
-          { key: 'tables',         href: 'tables.html',         text: 'Static' },
-          { key: 'tables-dynamic', href: 'tables_dynamic.html', text: 'Dynamic' }
+          { key: 'tables',         href: 'tables.html',         text: 'Estáticas' },
+          { key: 'tables-dynamic', href: 'tables_dynamic.html', text: 'Dinâmicas' }
         ]
       },
       {
-        text: 'Charts', icon: 'charts', badge: { text: 'New', cls: 'badge-teal' },
+        text: 'Gráficos', icon: 'charts', badge: { text: 'Novo', cls: 'badge-teal' },
         children: [
-          { key: 'charts',       href: 'chartjs.html',     text: 'Chart cards' },
-          { key: 'echarts',      href: 'echarts.html',     text: 'ECharts gallery' },
-          { key: 'other-charts', href: 'other_charts.html', text: 'SVG charts' }
+          { key: 'charts',       href: 'chartjs.html',     text: 'Cartões de Gráficos' },
+          { key: 'echarts',      href: 'echarts.html',     text: 'Galeria ECharts' },
+          { key: 'other-charts', href: 'other_charts.html', text: 'Gráficos SVG' }
         ]
       },
-      { key: 'calendar', href: 'calendar.html', text: 'Calendar', icon: 'calendar' },
-      { key: 'map',      href: 'map.html',      text: 'Map',      icon: 'map' }
+      { key: 'calendar', href: 'calendar.html', text: 'Calendário', icon: 'calendar' },
+      { key: 'map',      href: 'map.html',      text: 'Mapa',       icon: 'map' }
     ]
   },
   {
-    label: 'Apps',
+    label: 'Aplicativos',
     items: [
-      { key: 'chat',          href: 'chat.html',          text: 'Chat',          icon: 'chat', badge: { text: '3', cls: 'badge-teal' } },
-      { key: 'inbox',         href: 'inbox.html',         text: 'Inbox',         icon: 'mail' },
+      { key: 'chat',          href: 'chat.html',          text: 'Bate-papo',     icon: 'chat', badge: { text: '3', cls: 'badge-teal' } },
+      { key: 'inbox',         href: 'inbox.html',         text: 'Caixa de Entrada', icon: 'mail' },
       { key: 'kanban',        href: 'kanban.html',        text: 'Kanban',        icon: 'kanban' },
-      { key: 'files',         href: 'file_manager.html',  text: 'Files',         icon: 'files' },
-      { key: 'notifications', href: 'notifications.html', text: 'Notifications', icon: 'bell' }
+      { key: 'files',         href: 'file_manager.html',  text: 'Arquivos',      icon: 'files' },
+      { key: 'notifications', href: 'notifications.html', text: 'Notificações', icon: 'bell' }
     ]
   },
   {
     label: 'E-commerce',
     items: [
-      { key: 'storefront', href: 'e_commerce.html',    text: 'Storefront', icon: 'shop' },
-      { key: 'product',    href: 'product_detail.html', text: 'Product',   icon: 'tag' },
+      { key: 'storefront', href: 'e_commerce.html',    text: 'Vitrine',      icon: 'shop' },
+      { key: 'product',    href: 'product_detail.html', text: 'Produto',      icon: 'tag' },
       {
-        text: 'Orders', icon: 'cart',
+        text: 'Pedidos', icon: 'cart',
         children: [
-          { key: 'orders',       href: 'orders.html',       text: 'All orders' },
-          { key: 'order-detail', href: 'order_detail.html', text: 'Order detail' }
+          { key: 'orders',       href: 'orders.html',       text: 'Todos os Pedidos' },
+          { key: 'order-detail', href: 'order_detail.html', text: 'Detalhes do Pedido' }
         ]
       },
-      { key: 'invoice', href: 'invoice.html',        text: 'Invoice', icon: 'receipt' },
-      { key: 'pricing', href: 'pricing_tables.html', text: 'Pricing', icon: 'price' }
+      { key: 'invoice', href: 'invoice.html',        text: 'Fatura',       icon: 'receipt' },
+      { key: 'pricing', href: 'pricing_tables.html', text: 'Planos e Preços', icon: 'price' }
     ]
   },
   {
-    label: 'Projects',
+    label: 'Projetos',
     items: [
-      { key: 'projects',       href: 'projects.html',       text: 'All projects', icon: 'projects' },
-      { key: 'project-detail', href: 'project_detail.html', text: 'Project detail', icon: 'pages' }
+      { key: 'projects',       href: 'projects.html',       text: 'Todos os Projetos', icon: 'projects' },
+      { key: 'project-detail', href: 'project_detail.html', text: 'Detalhes do Projeto', icon: 'pages' }
     ]
   },
   {
-    label: 'UI library',
+    label: 'Biblioteca UI',
     items: [
-      { key: 'ui',         href: 'general_elements.html', text: 'Elements',   icon: 'ui' },
-      { key: 'widgets',    href: 'widgets.html',          text: 'Widgets',    icon: 'pages', badge: { text: '5', cls: 'badge-blue' } },
-      { key: 'playground', href: 'playground.html',       text: 'Playground', icon: 'code',  badge: { text: 'New', cls: 'badge-teal' } },
+      { key: 'ui',         href: 'general_elements.html', text: 'Elementos',   icon: 'ui' },
+      { key: 'widgets',    href: 'widgets.html',          text: 'Widgets',     icon: 'pages', badge: { text: '5', cls: 'badge-blue' } },
+      { key: 'playground', href: 'playground.html',       text: 'Laboratório', icon: 'code',  badge: { text: 'Novo', cls: 'badge-teal' } },
       { key: 'theme',      href: 'theme.html',            text: 'Theme',      icon: 'paint', badge: { text: 'New', cls: 'badge-teal' } },
       { key: 'typography', href: 'typography.html',       text: 'Typography', icon: 'type' },
       { key: 'icons',      href: 'icons.html',            text: 'Icons',      icon: 'icons' },
@@ -266,33 +266,33 @@ export function renderTopbar(breadcrumb) {
   return `
     <header class="topbar">
       <div class="topbar-left">
-        <button class="sidebar-toggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+        <button class="sidebar-toggle" type="button" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
-        <nav class="breadcrumb" aria-label="Breadcrumb">${crumbs}</nav>
+        <nav class="breadcrumb" aria-label="Caminho de navegação">${crumbs}</nav>
       </div>
       <div class="search-box">
         <svg class="s-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
-        <input type="text" placeholder="Search pages or run a command…" aria-label="Open command palette">
+        <input type="text" placeholder="Buscar páginas ou comandos..." aria-label="Abrir paleta de comandos">
         <kbd>⌘K</kbd>
       </div>
       <div class="topbar-right">
-        <a class="tb-btn tb-docs" href="https://gentelella.colorlib.com/docs/" target="_blank" rel="noopener" title="Documentation">
+        <a class="tb-btn tb-docs" href="https://gentelella.colorlib.com/docs/" target="_blank" rel="noopener" title="Documentação">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h11a4 4 0 014 4v13H8a4 4 0 01-4-4V4z"/><path d="M4 17a4 4 0 014-4h11"/></svg>
-          <span>Docs</span>
+          <span>Doc</span>
         </a>
-        <button class="tb-btn theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme" aria-pressed="false">
+        <button class="tb-btn theme-toggle" type="button" title="Alternar tema" aria-label="Alternar tema" aria-pressed="false">
           <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
           <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="tb-btn tb-notifications" type="button" title="Notifications" aria-label="Notifications" aria-haspopup="dialog" aria-expanded="false">
+        <button class="tb-btn tb-notifications" type="button" title="Notificações" aria-label="Notificações" aria-haspopup="dialog" aria-expanded="false">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3a6 6 0 00-6 6c0 6-3 7-3 7h18s-3-1-3-7a6 6 0 00-6-6z"/><path d="M10.5 21a1.5 1.5 0 003 0"/></svg>
           <span class="dot"></span>
         </button>
-        <button class="tb-btn tb-messages" type="button" title="Messages" aria-label="Messages" aria-haspopup="dialog" aria-expanded="false">
+        <button class="tb-btn tb-messages" type="button" title="Mensagens" aria-label="Mensagens" aria-haspopup="dialog" aria-expanded="false">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 6 10-6"/></svg>
         </button>
-        <button class="tb-avatar" type="button" aria-label="Account menu" aria-haspopup="menu" aria-expanded="false">A</button>
+        <button class="tb-avatar" type="button" aria-label="Menu do usuário" aria-haspopup="menu" aria-expanded="false">A</button>
       </div>
     </header>
   `;

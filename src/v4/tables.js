@@ -37,11 +37,11 @@ export async function initTables() {
       columnDefs,
       language: {
         search: '',
-        searchPlaceholder: 'Search…',
-        info: 'Showing _START_–_END_ of _TOTAL_',
-        infoEmpty: 'No matching records',
-        infoFiltered: '(of _MAX_ total)',
-        zeroRecords: 'No matches found',
+        searchPlaceholder: 'Pesquisar...',
+        info: 'Mostrando _START_–_END_ de _TOTAL_',
+        infoEmpty: 'Nenhum registro encontrado',
+        infoFiltered: '(de um total de _MAX_)',
+        zeroRecords: 'Nenhum resultado correspondente',
         paginate: { previous: '←', next: '→' }
       }
     });
@@ -56,7 +56,7 @@ export async function initTables() {
     // DataTables emits its search input without an accessible name.
     const searchInput = table.closest('.dt-container')?.querySelector('.dt-search input');
     if (searchInput && !searchInput.hasAttribute('aria-label')) {
-      searchInput.setAttribute('aria-label', 'Search table');
+      searchInput.setAttribute('aria-label', 'Pesquisar tabela');
     }
   });
 }
@@ -76,7 +76,7 @@ function wireRowSelection(table) {
     headerCb.indeterminate = checked > 0 && checked < rowCbs.length;
     table.classList.toggle('has-selection', checked > 0);
     const counter = table.closest('.card')?.querySelector('.bulk-selection-count');
-    if (counter) {counter.textContent = checked ? `${checked} selected` : '';}
+    if (counter) {counter.textContent = checked ? `${checked} selecionado(s)` : '';}
   };
 
   if (headerCb) {
